@@ -113,7 +113,7 @@
                 }
               ]
             },
-            "description": "Returns a page of patients. Filters combine with AND. Use `next_cursor` to fetch the next page.\n\nRequired key scope: `read`."
+            "description": "Returns a page of patients. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff and caregivers.\n\nRequired key scope: `read`."
           },
           "response": []
         },
@@ -1277,7 +1277,7 @@
                 "patient-notes"
               ]
             },
-            "description": "Creates a patient note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a patient note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"patientId\": \"3f6c2a9e-8b1d-4e7a-9c55-2d0e7b41a6f3\",\n  \"content\": \"Daughter visiting from out of state this week; prefers calls after 5pm.\"\n}",
@@ -1354,7 +1354,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated patient note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated patient note. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"content\": \"Daughter visiting from out of state this week; prefers calls after 5pm.\"\n}",
@@ -1969,7 +1969,7 @@
                 "caregiver-notes"
               ]
             },
-            "description": "Creates a caregiver note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a caregiver note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"caregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\",\n  \"content\": \"Completed dementia care refresher on 9/30.\"\n}",
@@ -2046,7 +2046,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated caregiver note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated caregiver note. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"content\": \"Completed dementia care refresher on 9/30.\"\n}",
@@ -2087,7 +2087,7 @@
                 }
               ]
             },
-            "description": "Deletes a caregiver note. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`."
+            "description": "Deletes a caregiver note. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`."
           },
           "response": []
         }
@@ -2194,7 +2194,7 @@
                 "certifications"
               ]
             },
-            "description": "Creates a certification and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a certification and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"caregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\",\n  \"name\": \"CPR and First Aid\"\n}",
@@ -2271,7 +2271,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated certification. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated certification. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"CPR and First Aid\",\n  \"certKind\": \"certification\",\n  \"obtained\": \"2025-11-02\"\n}",
@@ -2312,7 +2312,7 @@
                 }
               ]
             },
-            "description": "Deletes a certification. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`."
+            "description": "Deletes a certification. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`."
           },
           "response": []
         }
@@ -2419,7 +2419,7 @@
                 "availability"
               ]
             },
-            "description": "Creates an availability window and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates an availability window and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"caregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\"\n}",
@@ -2496,7 +2496,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated availability window. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated availability window. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"isAvailable\": true,\n  \"recurring\": true,\n  \"dayOfWeek\": 1\n}",
@@ -2644,7 +2644,7 @@
                 "specializations"
               ]
             },
-            "description": "Creates a specialization and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a specialization and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"caregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\",\n  \"name\": \"Dementia care\"\n}",
@@ -2721,7 +2721,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated specialization. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated specialization. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"Dementia care\",\n  \"description\": \"Certified through the Alzheimer's Association, 2024.\"\n}",
@@ -2762,7 +2762,7 @@
                 }
               ]
             },
-            "description": "Deletes a specialization. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`."
+            "description": "Deletes a specialization. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`."
           },
           "response": []
         }
@@ -3124,7 +3124,7 @@
                 "visits"
               ]
             },
-            "description": "Creates a visit and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a visit and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"patientId\": \"3f6c2a9e-8b1d-4e7a-9c55-2d0e7b41a6f3\",\n  \"startTime\": \"2026-10-06T15:00:00.000Z\",\n  \"endTime\": \"2026-10-06T19:00:00.000Z\"\n}",
@@ -3201,7 +3201,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated visit. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated visit. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"title\": \"Morning personal care\",\n  \"isAllDay\": false,\n  \"tasks\": [\n    \"Bathing\",\n    \"Meal preparation\",\n    \"Medication reminder\"\n  ]\n}",
@@ -3316,7 +3316,7 @@
                 }
               ]
             },
-            "description": "Returns a page of visit notes. Filters combine with AND. Use `next_cursor` to fetch the next page.\n\nRequired key scope: `read`."
+            "description": "Returns a page of visit notes. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff and caregivers.\n\nRequired key scope: `read`."
           },
           "response": []
         },
@@ -3349,7 +3349,7 @@
                 "visit-notes"
               ]
             },
-            "description": "Creates a visit note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a visit note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"visitId\": \"5e8a2c7b-9d1f-4b36-a4e2-6c0d8f3b1a75\",\n  \"content\": \"Patient was in good spirits; ate a full lunch.\"\n}",
@@ -3390,7 +3390,7 @@
                 }
               ]
             },
-            "description": "Returns one visit note by ID.\n\nRequired key scope: `read`."
+            "description": "Returns one visit note by ID. Available to keys belonging to office staff and caregivers.\n\nRequired key scope: `read`."
           },
           "response": []
         },
@@ -3426,7 +3426,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated visit note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated visit note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"content\": \"Patient was in good spirits; ate a full lunch.\"\n}",
@@ -3580,10 +3580,10 @@
                 "visit-requests"
               ]
             },
-            "description": "Creates a visit request and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a visit request and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"caregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\"\n}",
+              "raw": "{\n  \"caregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\",\n  \"patientId\": \"3f6c2a9e-8b1d-4e7a-9c55-2d0e7b41a6f3\",\n  \"patientName\": \"Margaret Alvarez\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -3657,7 +3657,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated visit request. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated visit request. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"patientId\": \"3f6c2a9e-8b1d-4e7a-9c55-2d0e7b41a6f3\",\n  \"patientName\": \"Margaret Alvarez\",\n  \"preferredStartDate\": \"2026-10-10\"\n}",
@@ -3698,7 +3698,7 @@
                 }
               ]
             },
-            "description": "Deletes a visit request. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`."
+            "description": "Deletes a visit request. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`."
           },
           "response": []
         }
@@ -4042,10 +4042,10 @@
                 "shift-swaps"
               ]
             },
-            "description": "Creates a shift swap and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a shift swap and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"visitId\": \"5e8a2c7b-9d1f-4b36-a4e2-6c0d8f3b1a75\",\n  \"requestingCaregiverId\": \"c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43\"\n}",
+              "raw": "{\n  \"visitId\": \"5e8a2c7b-9d1f-4b36-a4e2-6c0d8f3b1a75\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4119,10 +4119,10 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated shift swap. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated shift swap. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"requestingCaregiverName\": \"Rosa Jimenez\",\n  \"targetCaregiverId\": \"8a1f5c3e-2b7d-4e90-b6c4-3d9e1a7f2c58\",\n  \"targetCaregiverName\": \"Kim Park\"\n}",
+              "raw": "{\n  \"targetCaregiverId\": \"8a1f5c3e-2b7d-4e90-b6c4-3d9e1a7f2c58\",\n  \"targetCaregiverName\": \"Kim Park\",\n  \"reason\": \"Family appointment that afternoon.\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4160,7 +4160,7 @@
                 }
               ]
             },
-            "description": "Deletes a shift swap. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`."
+            "description": "Deletes a shift swap. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`."
           },
           "response": []
         }
@@ -4510,7 +4510,7 @@
                 "progress-notes"
               ]
             },
-            "description": "Creates a progress note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a progress note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"visitId\": \"5e8a2c7b-9d1f-4b36-a4e2-6c0d8f3b1a75\",\n  \"patientId\": \"3f6c2a9e-8b1d-4e7a-9c55-2d0e7b41a6f3\",\n  \"summary\": \"Assisted with shower and dressing. Patient walked 15 minutes with walker; no falls.\"\n}",
@@ -4587,10 +4587,10 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated progress note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated progress note. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"caregiverName\": \"Rosa Jimenez\",\n  \"summary\": \"Assisted with shower and dressing. Patient walked 15 minutes with walker; no falls.\"\n}",
+              "raw": "{\n  \"summary\": \"Assisted with shower and dressing. Patient walked 15 minutes with walker; no falls.\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -4628,7 +4628,7 @@
                 }
               ]
             },
-            "description": "Deletes a progress note. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`."
+            "description": "Deletes a progress note. Available to keys belonging to office staff. Requires a key with `write` scope.\n\nRequired key scope: `write`."
           },
           "response": []
         }
@@ -4951,7 +4951,7 @@
                 }
               ]
             },
-            "description": "Returns a page of incidents. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff.\n\nRequired key scope: `read`."
+            "description": "Returns a page of incidents. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff and caregivers.\n\nRequired key scope: `read`."
           },
           "response": []
         },
@@ -4984,7 +4984,7 @@
                 "incidents"
               ]
             },
-            "description": "Creates an incident and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates an incident and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"title\": \"Fall in bathroom\"\n}",
@@ -5025,7 +5025,7 @@
                 }
               ]
             },
-            "description": "Returns one incident by ID. Available to keys belonging to office staff.\n\nRequired key scope: `read`."
+            "description": "Returns one incident by ID. Available to keys belonging to office staff and caregivers.\n\nRequired key scope: `read`."
           },
           "response": []
         },
@@ -5061,7 +5061,7 @@
                 }
               ]
             },
-            "description": "Changes the fields you send and returns the updated incident. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Changes the fields you send and returns the updated incident. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"title\": \"Fall in bathroom\",\n  \"description\": \"Patient slipped stepping out of the shower; caregiver assisted to a chair.\",\n  \"incidentDateTime\": \"2026-10-04T16:20:00.000Z\"\n}",
@@ -6450,7 +6450,7 @@
                 "messages"
               ]
             },
-            "description": "Creates a message and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
+            "description": "Creates a message and returns it. Send an `Idempotency-Key` header to make the request safe to retry. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.\n\nRequired key scope: `write`.",
             "body": {
               "mode": "raw",
               "raw": "{\n  \"conversationId\": \"e3c7a1f9-6d2b-4a58-8e14-0b9f5c2d7a36\",\n  \"content\": \"See you at 9 tomorrow.\"\n}",

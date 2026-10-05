@@ -189,7 +189,7 @@ paths:
       tags:
         - Patients
       summary: List patients
-      description: Returns a page of patients. Filters combine with AND. Use `next_cursor` to fetch the next page.
+      description: Returns a page of patients. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff and caregivers.
       x-aveecare-scope: read
       parameters:
         - $ref: "#/components/parameters/Limit"
@@ -1574,7 +1574,7 @@ paths:
       tags:
         - Patient Notes
       summary: Create a patient note
-      description: Creates a patient note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a patient note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -1661,7 +1661,7 @@ paths:
       tags:
         - Patient Notes
       summary: Update a patient note
-      description: Changes the fields you send and returns the updated patient note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated patient note. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -2367,7 +2367,7 @@ paths:
       tags:
         - Caregiver Notes
       summary: Create a caregiver note
-      description: Creates a caregiver note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a caregiver note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -2454,7 +2454,7 @@ paths:
       tags:
         - Caregiver Notes
       summary: Update a caregiver note
-      description: Changes the fields you send and returns the updated caregiver note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated caregiver note. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -2503,7 +2503,7 @@ paths:
       tags:
         - Caregiver Notes
       summary: Delete a caregiver note
-      description: Deletes a caregiver note. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Deletes a caregiver note. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -2622,7 +2622,7 @@ paths:
       tags:
         - Certifications
       summary: Create a certification
-      description: Creates a certification and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a certification and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -2709,7 +2709,7 @@ paths:
       tags:
         - Certifications
       summary: Update a certification
-      description: Changes the fields you send and returns the updated certification. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated certification. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -2758,7 +2758,7 @@ paths:
       tags:
         - Certifications
       summary: Delete a certification
-      description: Deletes a certification. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Deletes a certification. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -2877,7 +2877,7 @@ paths:
       tags:
         - Availability
       summary: Create an availability window
-      description: Creates an availability window and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates an availability window and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -2964,7 +2964,7 @@ paths:
       tags:
         - Availability
       summary: Update an availability window
-      description: Changes the fields you send and returns the updated availability window. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated availability window. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -3132,7 +3132,7 @@ paths:
       tags:
         - Specializations
       summary: Create a specialization
-      description: Creates a specialization and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a specialization and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -3219,7 +3219,7 @@ paths:
       tags:
         - Specializations
       summary: Update a specialization
-      description: Changes the fields you send and returns the updated specialization. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated specialization. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -3268,7 +3268,7 @@ paths:
       tags:
         - Specializations
       summary: Delete a specialization
-      description: Deletes a specialization. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Deletes a specialization. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -3687,7 +3687,7 @@ paths:
       tags:
         - Visits
       summary: Create a visit
-      description: Creates a visit and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a visit and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -3774,7 +3774,7 @@ paths:
       tags:
         - Visits
       summary: Update a visit
-      description: Changes the fields you send and returns the updated visit. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated visit. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -3867,7 +3867,7 @@ paths:
       tags:
         - Visit Notes
       summary: List visit notes
-      description: Returns a page of visit notes. Filters combine with AND. Use `next_cursor` to fetch the next page.
+      description: Returns a page of visit notes. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff and caregivers.
       x-aveecare-scope: read
       parameters:
         - $ref: "#/components/parameters/Limit"
@@ -3942,7 +3942,7 @@ paths:
       tags:
         - Visit Notes
       summary: Create a visit note
-      description: Creates a visit note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a visit note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -3988,7 +3988,7 @@ paths:
       tags:
         - Visit Notes
       summary: Retrieve a visit note
-      description: Returns one visit note by ID.
+      description: Returns one visit note by ID. Available to keys belonging to office staff and caregivers.
       x-aveecare-scope: read
       parameters:
         - name: id
@@ -4029,7 +4029,7 @@ paths:
       tags:
         - Visit Notes
       summary: Update a visit note
-      description: Changes the fields you send and returns the updated visit note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated visit note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -4209,7 +4209,7 @@ paths:
       tags:
         - Visit Requests
       summary: Create a visit request
-      description: Creates a visit request and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a visit request and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -4296,7 +4296,7 @@ paths:
       tags:
         - Visit Requests
       summary: Update a visit request
-      description: Changes the fields you send and returns the updated visit request. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated visit request. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -4345,7 +4345,7 @@ paths:
       tags:
         - Visit Requests
       summary: Delete a visit request
-      description: Deletes a visit request. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Deletes a visit request. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -4744,7 +4744,7 @@ paths:
       tags:
         - Shift Swaps
       summary: Create a shift swap
-      description: Creates a shift swap and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a shift swap and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -4831,7 +4831,7 @@ paths:
       tags:
         - Shift Swaps
       summary: Update a shift swap
-      description: Changes the fields you send and returns the updated shift swap. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated shift swap. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -4880,7 +4880,7 @@ paths:
       tags:
         - Shift Swaps
       summary: Delete a shift swap
-      description: Deletes a shift swap. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Deletes a shift swap. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -5282,7 +5282,7 @@ paths:
       tags:
         - Progress Notes
       summary: Create a progress note
-      description: Creates a progress note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates a progress note and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -5369,7 +5369,7 @@ paths:
       tags:
         - Progress Notes
       summary: Update a progress note
-      description: Changes the fields you send and returns the updated progress note. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated progress note. Send `null` to clear an optional field. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -5418,7 +5418,7 @@ paths:
       tags:
         - Progress Notes
       summary: Delete a progress note
-      description: Deletes a progress note. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Deletes a progress note. Available to keys belonging to office staff. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -5728,7 +5728,7 @@ paths:
       tags:
         - Incidents
       summary: List incidents
-      description: Returns a page of incidents. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff.
+      description: Returns a page of incidents. Filters combine with AND. Use `next_cursor` to fetch the next page. Available to keys belonging to office staff and caregivers.
       x-aveecare-scope: read
       parameters:
         - $ref: "#/components/parameters/Limit"
@@ -5830,7 +5830,7 @@ paths:
       tags:
         - Incidents
       summary: Create an incident
-      description: Creates an incident and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Creates an incident and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -5876,7 +5876,7 @@ paths:
       tags:
         - Incidents
       summary: Retrieve an incident
-      description: Returns one incident by ID. Available to keys belonging to office staff.
+      description: Returns one incident by ID. Available to keys belonging to office staff and caregivers.
       x-aveecare-scope: read
       parameters:
         - name: id
@@ -5917,7 +5917,7 @@ paths:
       tags:
         - Incidents
       summary: Update an incident
-      description: Changes the fields you send and returns the updated incident. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. Requires a key with `write` scope.
+      description: Changes the fields you send and returns the updated incident. Send `null` to clear an optional field. Available to keys belonging to office staff and caregivers. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - name: id
@@ -7534,7 +7534,7 @@ paths:
       tags:
         - Messages
       summary: Create a message
-      description: Creates a message and returns it. Send an `Idempotency-Key` header to make the request safe to retry. Requires a key with `write` scope.
+      description: Creates a message and returns it. Send an `Idempotency-Key` header to make the request safe to retry. With a caregiver's or patient's key, a saved record that key cannot read back is answered with only `object` and `id`. Requires a key with `write` scope.
       x-aveecare-scope: write
       parameters:
         - $ref: "#/components/parameters/IdempotencyKey"
@@ -13837,15 +13837,16 @@ components:
             - string
             - "null"
           maxLength: 64
-          description: The caregiver asking for the visit.
+          description: The caregiver asking for the visit. With a caregiver's API key this is always that caregiver (leave it out); office staff must send it.
           example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
         caregiverName:
           type:
             - string
             - "null"
-          maxLength: 200
-          description: Caregiver's display name.
+          maxLength: 2000
+          description: Caregiver's display name, taken from the caregiver's record.
           example: Rosa Jimenez
+          readOnly: true
         patientId:
           type:
             - string
@@ -13898,14 +13899,14 @@ components:
             - Denied
             - Cancelled
             - null
-          description: Where the request stands.
+          description: Where the request stands. A caregiver's key creates `Pending` requests and can only change its own pending request to `Cancelled`; approving and denying is for office staff.
           example: Pending
         adminResponse:
           type:
             - string
             - "null"
           maxLength: 20000
-          description: The office's reply.
+          description: The office's reply. Set by office staff.
           example: null
         respondedByName:
           type:
@@ -13975,17 +13976,12 @@ components:
       additionalProperties: false
       properties:
         caregiverId:
-          type: string
-          maxLength: 64
-          description: The caregiver asking for the visit.
-          example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
-        caregiverName:
           type:
             - string
             - "null"
-          maxLength: 200
-          description: Caregiver's display name.
-          example: Rosa Jimenez
+          maxLength: 64
+          description: The caregiver asking for the visit. With a caregiver's API key this is always that caregiver (leave it out); office staff must send it.
+          example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
         patientId:
           type:
             - string
@@ -14038,20 +14034,18 @@ components:
             - Denied
             - Cancelled
             - null
-          description: Where the request stands.
+          description: Where the request stands. A caregiver's key creates `Pending` requests and can only change its own pending request to `Cancelled`; approving and denying is for office staff.
           example: Pending
         adminResponse:
           type:
             - string
             - "null"
           maxLength: 20000
-          description: The office's reply.
+          description: The office's reply. Set by office staff.
           example: null
-      required:
-        - caregiverId
     VisitRequestUpdate:
       type: object
-      description: Fields to change on a visit request. Send only the fields to change; any other field is refused with `unknown_field`. `caregiverId`, `caregiverName` are set when the visit request is created and cannot be changed afterwards.
+      description: Fields to change on a visit request. Send only the fields to change; any other field is refused with `unknown_field`. `caregiverId` is set when the visit request is created and cannot be changed afterwards.
       additionalProperties: false
       properties:
         patientId:
@@ -14106,14 +14100,14 @@ components:
             - Denied
             - Cancelled
             - null
-          description: Where the request stands.
+          description: Where the request stands. A caregiver's key creates `Pending` requests and can only change its own pending request to `Cancelled`; approving and denying is for office staff.
           example: Pending
         adminResponse:
           type:
             - string
             - "null"
           maxLength: 20000
-          description: The office's reply.
+          description: The office's reply. Set by office staff.
           example: null
       minProperties: 1
     VisitRequestDeleted:
@@ -14365,15 +14359,16 @@ components:
             - string
             - "null"
           maxLength: 64
-          description: The caregiver giving up the visit.
+          description: The caregiver giving up the visit. With a caregiver's API key this is always that caregiver (leave it out), and the visit must be assigned to them; office staff must send it.
           example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
         requestingCaregiverName:
           type:
             - string
             - "null"
-          maxLength: 200
-          description: Display name of the requesting caregiver.
+          maxLength: 2000
+          description: Display name of the requesting caregiver, taken from the caregiver's record.
           example: Rosa Jimenez
+          readOnly: true
         targetCaregiverId:
           type:
             - string
@@ -14407,7 +14402,7 @@ components:
             - AdminApproved
             - AdminDenied
             - null
-          description: Where the swap stands.
+          description: "Where the swap stands. With a caregiver's key: new swaps are `Pending`; the asked caregiver changes a `Pending` swap to `Accepted` or `Declined`; the requesting caregiver can change it to `Cancelled`. `AdminApproved` and `AdminDenied` are for office staff."
           example: Pending
         requestDate:
           type:
@@ -14489,17 +14484,12 @@ components:
           description: The visit to hand over.
           example: 5e8a2c7b-9d1f-4b36-a4e2-6c0d8f3b1a75
         requestingCaregiverId:
-          type: string
-          maxLength: 64
-          description: The caregiver giving up the visit.
-          example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
-        requestingCaregiverName:
           type:
             - string
             - "null"
-          maxLength: 200
-          description: Display name of the requesting caregiver.
-          example: Rosa Jimenez
+          maxLength: 64
+          description: The caregiver giving up the visit. With a caregiver's API key this is always that caregiver (leave it out), and the visit must be assigned to them; office staff must send it.
+          example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
         targetCaregiverId:
           type:
             - string
@@ -14533,7 +14523,7 @@ components:
             - AdminApproved
             - AdminDenied
             - null
-          description: Where the swap stands.
+          description: "Where the swap stands. With a caregiver's key: new swaps are `Pending`; the asked caregiver changes a `Pending` swap to `Accepted` or `Declined`; the requesting caregiver can change it to `Cancelled`. `AdminApproved` and `AdminDenied` are for office staff."
           example: Pending
         requestDate:
           type:
@@ -14544,19 +14534,11 @@ components:
           example: 2026-10-05T12:00:00.000Z
       required:
         - visitId
-        - requestingCaregiverId
     ShiftSwapUpdate:
       type: object
       description: Fields to change on a shift swap. Send only the fields to change; any other field is refused with `unknown_field`. `visitId`, `requestingCaregiverId` are set when the shift swap is created and cannot be changed afterwards.
       additionalProperties: false
       properties:
-        requestingCaregiverName:
-          type:
-            - string
-            - "null"
-          maxLength: 200
-          description: Display name of the requesting caregiver.
-          example: Rosa Jimenez
         targetCaregiverId:
           type:
             - string
@@ -14590,7 +14572,7 @@ components:
             - AdminApproved
             - AdminDenied
             - null
-          description: Where the swap stands.
+          description: "Where the swap stands. With a caregiver's key: new swaps are `Pending`; the asked caregiver changes a `Pending` swap to `Accepted` or `Declined`; the requesting caregiver can change it to `Cancelled`. `AdminApproved` and `AdminDenied` are for office staff."
           example: Pending
         requestDate:
           type:
@@ -15008,15 +14990,16 @@ components:
             - string
             - "null"
           maxLength: 64
-          description: The caregiver who wrote the note.
+          description: The caregiver who wrote the note. With a caregiver's API key this is always that caregiver (leave it out), and the visit must be assigned to them.
           example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
         caregiverName:
           type:
             - string
             - "null"
-          maxLength: 200
-          description: Display name of the caregiver.
+          maxLength: 2000
+          description: Display name of the caregiver, taken from the caregiver's record.
           example: Rosa Jimenez
+          readOnly: true
         summary:
           type:
             - string
@@ -15097,15 +15080,8 @@ components:
             - string
             - "null"
           maxLength: 64
-          description: The caregiver who wrote the note.
+          description: The caregiver who wrote the note. With a caregiver's API key this is always that caregiver (leave it out), and the visit must be assigned to them.
           example: c4e1a8b2-7d3f-4c69-9b0e-5a2f8d6c1e43
-        caregiverName:
-          type:
-            - string
-            - "null"
-          maxLength: 200
-          description: Display name of the caregiver.
-          example: Rosa Jimenez
         summary:
           type: string
           maxLength: 20000
@@ -15120,13 +15096,6 @@ components:
       description: Fields to change on a progress note. Send only the fields to change; any other field is refused with `unknown_field`. `visitId`, `patientId`, `caregiverId` are set when the progress note is created and cannot be changed afterwards.
       additionalProperties: false
       properties:
-        caregiverName:
-          type:
-            - string
-            - "null"
-          maxLength: 200
-          description: Display name of the caregiver.
-          example: Rosa Jimenez
         summary:
           type: string
           maxLength: 20000
@@ -15752,7 +15721,7 @@ components:
             - Resolved
             - Closed
             - null
-          description: Where follow-up stands.
+          description: Where follow-up stands. New incidents start `Open`.
           example: Open
         patientId:
           type:
@@ -16005,7 +15974,7 @@ components:
             - Resolved
             - Closed
             - null
-          description: Where follow-up stands.
+          description: Where follow-up stands. New incidents start `Open`. Only keys belonging to office staff can set this.
           example: Open
         patientId:
           type:
@@ -16097,7 +16066,7 @@ components:
             - string
             - "null"
           format: date-time
-          description: When follow-up is due.
+          description: When follow-up is due. Only keys belonging to office staff can set this.
           example: 2026-10-06T16:00:00.000Z
         followUpNotes:
           type:
@@ -16110,20 +16079,20 @@ components:
           type:
             - boolean
             - "null"
-          description: Whether the incident is resolved.
+          description: Whether the incident is resolved. Only keys belonging to office staff can set this.
           example: false
         resolutionNotes:
           type:
             - string
             - "null"
           maxLength: 20000
-          description: How it was resolved.
+          description: How it was resolved. Only keys belonging to office staff can set this.
           example: null
         isConfidential:
           type:
             - boolean
             - "null"
-          description: Whether only administrators can see it.
+          description: Whether only administrators can see it. Only keys belonging to office staff can set this.
           example: false
       required:
         - title
@@ -16190,7 +16159,7 @@ components:
             - Resolved
             - Closed
             - null
-          description: Where follow-up stands.
+          description: Where follow-up stands. New incidents start `Open`. Only keys belonging to office staff can set this.
           example: Open
         patientId:
           type:
@@ -16282,7 +16251,7 @@ components:
             - string
             - "null"
           format: date-time
-          description: When follow-up is due.
+          description: When follow-up is due. Only keys belonging to office staff can set this.
           example: 2026-10-06T16:00:00.000Z
         followUpNotes:
           type:
@@ -16295,20 +16264,20 @@ components:
           type:
             - boolean
             - "null"
-          description: Whether the incident is resolved.
+          description: Whether the incident is resolved. Only keys belonging to office staff can set this.
           example: false
         resolutionNotes:
           type:
             - string
             - "null"
           maxLength: 20000
-          description: How it was resolved.
+          description: How it was resolved. Only keys belonging to office staff can set this.
           example: null
         isConfidential:
           type:
             - boolean
             - "null"
-          description: Whether only administrators can see it.
+          description: Whether only administrators can see it. Only keys belonging to office staff can set this.
           example: false
       minProperties: 1
     IncidentDeleted:
