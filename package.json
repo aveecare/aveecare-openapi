@@ -1,0 +1,43 @@
+{
+  "name": "aveecare-openapi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The public OpenAPI 3.1 specification of the AveeCare API, with a Postman collection and lint rules.",
+  "keywords": [
+    "aveecare",
+    "openapi",
+    "openapi 3.1",
+    "home care software",
+    "home health",
+    "EVV",
+    "caregiver scheduling",
+    "healthcare API",
+    "HIPAA",
+    "postman"
+  ],
+  "homepage": "https://www.aveecare.com/docs/api",
+  "bugs": {
+    "url": "https://github.com/aveecare/aveecare-openapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aveecare/aveecare-openapi.git"
+  },
+  "license": "MIT",
+  "author": "AveeCare (https://www.aveecare.com)",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "lint": "spectral lint openapi.yaml",
+    "validate": "node scripts/validate.mjs",
+    "postman": "node scripts/build-postman.mjs",
+    "sync": "node scripts/sync.mjs",
+    "test": "npm run validate && npm run lint"
+  },
+  "devDependencies": {
+    "@stoplight/spectral-cli": "^6.15.0",
+    "yaml": "^2.6.0"
+  }
+}

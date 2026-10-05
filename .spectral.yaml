@@ -1,0 +1,15 @@
+# Lint rules for the AveeCare OpenAPI specification.
+#
+#   npx @stoplight/spectral-cli lint openapi.yaml
+#
+# Spectral's recommended OpenAPI ruleset, with the documentation rules raised
+# to errors: every operation needs an operationId, a summary-level description
+# and a defined tag.
+extends: ["spectral:oas"]
+rules:
+  info-description: error
+  operation-operationId: error
+  operation-description: error
+  operation-tag-defined: error
+  operation-operationId-unique: error
+  oas3-valid-schema-example: error
