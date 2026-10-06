@@ -12643,7 +12643,7 @@
             ],
             "maxLength": 100,
             "description": "Given name.",
-            "example": "Margaret"
+            "example": "Eleanor"
           },
           "middleName": {
             "type": [
@@ -12661,7 +12661,7 @@
             ],
             "maxLength": 100,
             "description": "Family name.",
-            "example": "Alvarez"
+            "example": "Vance"
           },
           "goesByName": {
             "type": [
@@ -12707,7 +12707,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Contact email address.",
-            "example": "margaret.alvarez@example.com"
+            "example": "eleanor.vance@example.com"
           },
           "active": {
             "type": [
@@ -12849,7 +12849,7 @@
             ],
             "maxLength": 200,
             "description": "Person legally responsible for the patient, if not the patient.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "medicaidId": {
             "type": [
@@ -12903,7 +12903,7 @@
             ],
             "maxLength": 200,
             "description": "Who receives the bills.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "billingContactEmail": {
             "type": [
@@ -12913,7 +12913,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Email address bills are sent to.",
-            "example": "daniel.alvarez@example.com"
+            "example": "susan.mitchell@example.com"
           },
           "billingContactPhone": {
             "type": [
@@ -13036,7 +13036,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Given name.",
-            "example": "Margaret"
+            "example": "Eleanor"
           },
           "middleName": {
             "type": [
@@ -13051,7 +13051,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Family name.",
-            "example": "Alvarez"
+            "example": "Vance"
           },
           "goesByName": {
             "type": [
@@ -13097,7 +13097,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Contact email address.",
-            "example": "margaret.alvarez@example.com"
+            "example": "eleanor.vance@example.com"
           },
           "active": {
             "type": [
@@ -13246,7 +13246,7 @@
             ],
             "maxLength": 200,
             "description": "Person legally responsible for the patient, if not the patient.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "medicaidId": {
             "type": [
@@ -13300,7 +13300,7 @@
             ],
             "maxLength": 200,
             "description": "Who receives the bills.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "billingContactEmail": {
             "type": [
@@ -13310,7 +13310,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Email address bills are sent to.",
-            "example": "daniel.alvarez@example.com"
+            "example": "susan.mitchell@example.com"
           },
           "billingContactPhone": {
             "type": [
@@ -13368,7 +13368,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Given name.",
-            "example": "Margaret"
+            "example": "Eleanor"
           },
           "middleName": {
             "type": [
@@ -13383,7 +13383,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Family name.",
-            "example": "Alvarez"
+            "example": "Vance"
           },
           "goesByName": {
             "type": [
@@ -13429,7 +13429,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Contact email address.",
-            "example": "margaret.alvarez@example.com"
+            "example": "eleanor.vance@example.com"
           },
           "active": {
             "type": [
@@ -13578,7 +13578,7 @@
             ],
             "maxLength": 200,
             "description": "Person legally responsible for the patient, if not the patient.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "medicaidId": {
             "type": [
@@ -13632,7 +13632,7 @@
             ],
             "maxLength": 200,
             "description": "Who receives the bills.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "billingContactEmail": {
             "type": [
@@ -13642,7 +13642,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Email address bills are sent to.",
-            "example": "daniel.alvarez@example.com"
+            "example": "susan.mitchell@example.com"
           },
           "billingContactPhone": {
             "type": [
@@ -13769,7 +13769,7 @@
             ],
             "maxLength": 200,
             "description": "Full name.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "relationship": {
             "type": [
@@ -13797,7 +13797,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Email address.",
-            "example": "daniel.alvarez@example.com"
+            "example": "susan.mitchell@example.com"
           },
           "preferEmail": {
             "type": [
@@ -13905,7 +13905,7 @@
             "type": "string",
             "maxLength": 200,
             "description": "Full name.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "relationship": {
             "type": [
@@ -13933,7 +13933,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Email address.",
-            "example": "daniel.alvarez@example.com"
+            "example": "susan.mitchell@example.com"
           },
           "preferEmail": {
             "type": [
@@ -13979,7 +13979,7 @@
             "type": "string",
             "maxLength": 200,
             "description": "Full name.",
-            "example": "Daniel Alvarez"
+            "example": "Susan Vance-Mitchell"
           },
           "relationship": {
             "type": [
@@ -14007,7 +14007,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Email address.",
-            "example": "daniel.alvarez@example.com"
+            "example": "susan.mitchell@example.com"
           },
           "preferEmail": {
             "type": [
@@ -15333,7 +15333,7 @@
             ],
             "maxLength": 2000,
             "description": "Display name of the author.",
-            "example": "Rosa Jimenez",
+            "example": "Maria Santos",
             "readOnly": true
           },
           "createdAt": {
@@ -15589,7 +15589,7 @@
             ],
             "maxLength": 2000,
             "description": "Who gave or recorded the dose.",
-            "example": "Rosa Jimenez",
+            "example": "Maria Santos",
             "readOnly": true
           },
           "reasonText": {
@@ -15992,7 +15992,7 @@
             ],
             "maxLength": 100,
             "description": "Given name.",
-            "example": "Rosa"
+            "example": "Maria"
           },
           "middleName": {
             "type": [
@@ -16010,7 +16010,7 @@
             ],
             "maxLength": 100,
             "description": "Family name.",
-            "example": "Jimenez"
+            "example": "Santos"
           },
           "goesByName": {
             "type": [
@@ -16029,7 +16029,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Work email address.",
-            "example": "rosa.jimenez@example.com"
+            "example": "maria.santos@example.com"
           },
           "status": {
             "type": [
@@ -16268,7 +16268,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Given name.",
-            "example": "Rosa"
+            "example": "Maria"
           },
           "middleName": {
             "type": [
@@ -16283,7 +16283,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Family name.",
-            "example": "Jimenez"
+            "example": "Santos"
           },
           "goesByName": {
             "type": [
@@ -16302,7 +16302,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Work email address.",
-            "example": "rosa.jimenez@example.com"
+            "example": "maria.santos@example.com"
           },
           "status": {
             "type": [
@@ -16475,7 +16475,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Given name.",
-            "example": "Rosa"
+            "example": "Maria"
           },
           "middleName": {
             "type": [
@@ -16490,7 +16490,7 @@
             "type": "string",
             "maxLength": 100,
             "description": "Family name.",
-            "example": "Jimenez"
+            "example": "Santos"
           },
           "goesByName": {
             "type": [
@@ -16509,7 +16509,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Work email address.",
-            "example": "rosa.jimenez@example.com"
+            "example": "maria.santos@example.com"
           },
           "status": {
             "type": [
@@ -16766,7 +16766,7 @@
             ],
             "maxLength": 2000,
             "description": "Display name of the author.",
-            "example": "Avery Chen",
+            "example": "Alice Smith",
             "readOnly": true
           },
           "createdAt": {
@@ -17014,7 +17014,7 @@
             ],
             "maxLength": 2000,
             "description": "Who verified the credential.",
-            "example": "Avery Chen",
+            "example": "Alice Smith",
             "readOnly": true
           },
           "verifiedAt": {
@@ -19648,7 +19648,7 @@
             ],
             "maxLength": 2000,
             "description": "Caregiver's display name, taken from the caregiver's record.",
-            "example": "Rosa Jimenez",
+            "example": "Maria Santos",
             "readOnly": true
           },
           "patientId": {
@@ -19667,7 +19667,7 @@
             ],
             "maxLength": 200,
             "description": "Patient's display name.",
-            "example": "Margaret Alvarez"
+            "example": "Eleanor Vance"
           },
           "preferredStartDate": {
             "type": [
@@ -19841,7 +19841,7 @@
             ],
             "maxLength": 200,
             "description": "Patient's display name.",
-            "example": "Margaret Alvarez"
+            "example": "Eleanor Vance"
           },
           "preferredStartDate": {
             "type": [
@@ -19926,7 +19926,7 @@
             ],
             "maxLength": 200,
             "description": "Patient's display name.",
-            "example": "Margaret Alvarez"
+            "example": "Eleanor Vance"
           },
           "preferredStartDate": {
             "type": [
@@ -20318,7 +20318,7 @@
             ],
             "maxLength": 2000,
             "description": "Display name of the requesting caregiver, taken from the caregiver's record.",
-            "example": "Rosa Jimenez",
+            "example": "Maria Santos",
             "readOnly": true
           },
           "targetCaregiverId": {
@@ -20337,7 +20337,7 @@
             ],
             "maxLength": 200,
             "description": "Display name of the target caregiver.",
-            "example": "Kim Park"
+            "example": "Marcus Reed"
           },
           "reason": {
             "type": [
@@ -20492,7 +20492,7 @@
             ],
             "maxLength": 200,
             "description": "Display name of the target caregiver.",
-            "example": "Kim Park"
+            "example": "Marcus Reed"
           },
           "reason": {
             "type": [
@@ -20555,7 +20555,7 @@
             ],
             "maxLength": 200,
             "description": "Display name of the target caregiver.",
-            "example": "Kim Park"
+            "example": "Marcus Reed"
           },
           "reason": {
             "type": [
@@ -21121,7 +21121,7 @@
             ],
             "maxLength": 2000,
             "description": "Display name of the caregiver, taken from the caregiver's record.",
-            "example": "Rosa Jimenez",
+            "example": "Maria Santos",
             "readOnly": true
           },
           "summary": {
@@ -22202,7 +22202,7 @@
             ],
             "maxLength": 2000,
             "description": "Who reported it.",
-            "example": "Rosa Jimenez",
+            "example": "Maria Santos",
             "readOnly": true
           },
           "reportedAt": {
@@ -23009,7 +23009,7 @@
             ],
             "maxLength": 2000,
             "description": "Who documented it.",
-            "example": "Avery Chen",
+            "example": "Alice Smith",
             "readOnly": true
           },
           "reportedAt": {
@@ -23541,7 +23541,7 @@
             ],
             "maxLength": 200,
             "description": "Main contact.",
-            "example": "Priya Natarajan"
+            "example": "Priya Patel"
           },
           "contactTitle": {
             "type": [
@@ -23569,7 +23569,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Contact's email address.",
-            "example": "priya.natarajan@example.com"
+            "example": "priya.patel@example.com"
           },
           "address": {
             "type": [
@@ -23750,7 +23750,7 @@
             ],
             "maxLength": 200,
             "description": "Main contact.",
-            "example": "Priya Natarajan"
+            "example": "Priya Patel"
           },
           "contactTitle": {
             "type": [
@@ -23778,7 +23778,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Contact's email address.",
-            "example": "priya.natarajan@example.com"
+            "example": "priya.patel@example.com"
           },
           "address": {
             "type": [
@@ -23874,7 +23874,7 @@
             ],
             "maxLength": 200,
             "description": "Main contact.",
-            "example": "Priya Natarajan"
+            "example": "Priya Patel"
           },
           "contactTitle": {
             "type": [
@@ -23902,7 +23902,7 @@
             "format": "email",
             "maxLength": 320,
             "description": "Contact's email address.",
-            "example": "priya.natarajan@example.com"
+            "example": "priya.patel@example.com"
           },
           "address": {
             "type": [
@@ -24055,7 +24055,7 @@
             ],
             "maxLength": 200,
             "description": "Name of the person referred.",
-            "example": "Harold Becker"
+            "example": "Harold Finch"
           },
           "contactPhone": {
             "type": [
@@ -24248,7 +24248,7 @@
             "type": "string",
             "maxLength": 200,
             "description": "Name of the person referred.",
-            "example": "Harold Becker"
+            "example": "Harold Finch"
           },
           "contactPhone": {
             "type": [
@@ -24374,7 +24374,7 @@
             "type": "string",
             "maxLength": 200,
             "description": "Name of the person referred.",
-            "example": "Harold Becker"
+            "example": "Harold Finch"
           },
           "contactPhone": {
             "type": [
@@ -25547,7 +25547,7 @@
             ],
             "maxLength": 2000,
             "description": "Who approved the entry.",
-            "example": "Avery Chen",
+            "example": "Alice Smith",
             "readOnly": true
           },
           "approvedAt": {
@@ -26729,7 +26729,7 @@
             "type": "string",
             "format": "email",
             "description": "Email address of the person the key belongs to.",
-            "example": "avery@sunrisehomecare.example",
+            "example": "alice.smith@example.com",
             "readOnly": true
           },
           "expiresAt": {
