@@ -26758,12 +26758,12 @@
                   "null"
                 ],
                 "description": "Agency name.",
-                "example": "Sunrise Home Care"
+                "example": "AveeCare Demo Agency"
               }
             },
             "example": {
               "id": "0d6c1f2a-3b4e-4c5d-9e8f-7a6b5c4d3e2f",
-              "name": "Sunrise Home Care"
+              "name": "AveeCare Demo Agency"
             },
             "readOnly": true
           }
