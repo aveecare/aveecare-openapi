@@ -12714,7 +12714,7 @@
               "boolean",
               "null"
             ],
-            "description": "Whether the patient is an active client. Only active clients are scheduled and billed. A prospective client is always inactive.",
+            "description": "Whether the patient is an active client. Only active clients are scheduled and billed. A prospective client is always inactive. If you leave it out on create, it is `false` for a prospect or an `Inactive` or `Discharged` status and `true` otherwise.",
             "example": true
           },
           "status": {
@@ -12722,7 +12722,7 @@
               "string",
               "null"
             ],
-            "description": "The client's status as shown in AveeCare. `Inactive` and `Discharged` mean the person is no longer receiving care. A prospective client (`lifecycleStage: Prospect`) reads `Prospect` even if you send `Active`. Usually one of `Active`, `Inactive`, `Prospect`, `Discharged`; records imported from another system can hold other values.",
+            "description": "The client's status as shown in AveeCare. `Inactive` and `Discharged` mean the person is no longer receiving care. A prospective client (`lifecycleStage: Prospect`) reads `Prospect` even if you send `Active`. Creating a patient with `Prospect` makes them a prospective client. Defaults to `Active`. Usually one of `Active`, `Inactive`, `Prospect`, `Discharged`; records imported from another system can hold other values.",
             "example": "Active"
           },
           "lifecycleStage": {
@@ -12735,7 +12735,7 @@
               "Client",
               null
             ],
-            "description": "Whether this person is a prospective client or an admitted client. `null` means client.",
+            "description": "Whether this person is a prospective client or an admitted client. `null` means client. Prospects appear in the prospective-patient pool in AveeCare, not on the patient roster.",
             "example": "Client"
           },
           "serviceType": {
@@ -13104,7 +13104,7 @@
               "boolean",
               "null"
             ],
-            "description": "Whether the patient is an active client. Only active clients are scheduled and billed. A prospective client is always inactive.",
+            "description": "Whether the patient is an active client. Only active clients are scheduled and billed. A prospective client is always inactive. If you leave it out on create, it is `false` for a prospect or an `Inactive` or `Discharged` status and `true` otherwise.",
             "example": true
           },
           "status": {
@@ -13119,7 +13119,7 @@
               "Discharged",
               null
             ],
-            "description": "The client's status as shown in AveeCare. `Inactive` and `Discharged` mean the person is no longer receiving care. A prospective client (`lifecycleStage: Prospect`) reads `Prospect` even if you send `Active`.",
+            "description": "The client's status as shown in AveeCare. `Inactive` and `Discharged` mean the person is no longer receiving care. A prospective client (`lifecycleStage: Prospect`) reads `Prospect` even if you send `Active`. Creating a patient with `Prospect` makes them a prospective client. Defaults to `Active`.",
             "example": "Active"
           },
           "lifecycleStage": {
@@ -13132,7 +13132,7 @@
               "Client",
               null
             ],
-            "description": "Whether this person is a prospective client or an admitted client. `null` means client.",
+            "description": "Whether this person is a prospective client or an admitted client. `null` means client. Prospects appear in the prospective-patient pool in AveeCare, not on the patient roster.",
             "example": "Client"
           },
           "serviceType": {
@@ -13436,7 +13436,7 @@
               "boolean",
               "null"
             ],
-            "description": "Whether the patient is an active client. Only active clients are scheduled and billed. A prospective client is always inactive.",
+            "description": "Whether the patient is an active client. Only active clients are scheduled and billed. A prospective client is always inactive. If you leave it out on create, it is `false` for a prospect or an `Inactive` or `Discharged` status and `true` otherwise.",
             "example": true
           },
           "status": {
@@ -13451,7 +13451,7 @@
               "Discharged",
               null
             ],
-            "description": "The client's status as shown in AveeCare. `Inactive` and `Discharged` mean the person is no longer receiving care. A prospective client (`lifecycleStage: Prospect`) reads `Prospect` even if you send `Active`.",
+            "description": "The client's status as shown in AveeCare. `Inactive` and `Discharged` mean the person is no longer receiving care. A prospective client (`lifecycleStage: Prospect`) reads `Prospect` even if you send `Active`. Creating a patient with `Prospect` makes them a prospective client. Defaults to `Active`.",
             "example": "Active"
           },
           "lifecycleStage": {
@@ -13464,7 +13464,7 @@
               "Client",
               null
             ],
-            "description": "Whether this person is a prospective client or an admitted client. `null` means client.",
+            "description": "Whether this person is a prospective client or an admitted client. `null` means client. Prospects appear in the prospective-patient pool in AveeCare, not on the patient roster.",
             "example": "Client"
           },
           "serviceType": {
@@ -16050,7 +16050,7 @@
               "boolean",
               "null"
             ],
-            "description": "Whether the caregiver can be scheduled.",
+            "description": "Whether the caregiver can be scheduled. If you leave it out on create, it is `false` for an `Inactive` status and `true` otherwise.",
             "example": true
           },
           "dateOfBirth": {
@@ -16323,7 +16323,7 @@
               "boolean",
               "null"
             ],
-            "description": "Whether the caregiver can be scheduled.",
+            "description": "Whether the caregiver can be scheduled. If you leave it out on create, it is `false` for an `Inactive` status and `true` otherwise.",
             "example": true
           },
           "dateOfBirth": {
@@ -16530,7 +16530,7 @@
               "boolean",
               "null"
             ],
-            "description": "Whether the caregiver can be scheduled.",
+            "description": "Whether the caregiver can be scheduled. If you leave it out on create, it is `false` for an `Inactive` status and `true` otherwise.",
             "example": true
           },
           "dateOfBirth": {
